@@ -77,7 +77,10 @@ export default function Dashboard() {
 
             {/* Quick Actions */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <Card className="cursor-pointer hover:shadow-lg transition-shadow">
+              <Card 
+                className="cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() => window.location.href = '/create-exam'}
+              >
                 <CardHeader className="pb-3">
                   <div className="flex items-center gap-2">
                     <PlusCircle className="h-5 w-5 text-primary" />
@@ -91,7 +94,10 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
 
-              <Card className="cursor-pointer hover:shadow-lg transition-shadow">
+              <Card 
+                className="cursor-pointer hover:shadow-lg transition-shadow"
+                onClick={() => window.location.href = '/my-exams'}
+              >
                 <CardHeader className="pb-3">
                   <div className="flex items-center gap-2">
                     <BookOpen className="h-5 w-5 text-accent" />

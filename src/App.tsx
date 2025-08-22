@@ -7,6 +7,10 @@ import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
+import CreateExam from "./pages/CreateExam";
+import MyExams from "./pages/MyExams";
+import TakeExam from "./pages/TakeExam";
+import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +26,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/create-exam" element={<CreateExam />} />
+            <Route path="/my-exams" element={<MyExams />} />
+            <Route path="/take-exam/:examId" element={<TakeExam />} />
+            <Route path="/exam-result/:attemptId" element={<Results />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
